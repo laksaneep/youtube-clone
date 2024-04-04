@@ -1,5 +1,6 @@
 import { useAppContext } from "../../context/App.context";
 import RegularVideoItem from "../regularVideoItem/RegularVideoItem";
+import VideoShort from "../videoShort/VideoShort";
 import { RegularVideoThumnail, StyledHomePageVideo } from "./Homepage.styles";
 
 const HomepageVideo = () => {
@@ -13,6 +14,12 @@ const HomepageVideo = () => {
     <StyledHomePageVideo>
       <RegularVideoThumnail>
         {FIRST_VIDEO_SECTION.map((item, index) => (
+          <RegularVideoItem video={item}></RegularVideoItem>
+        ))}
+      </RegularVideoThumnail>
+      <VideoShort videos={SECOND_VIDEO_SECTION} />
+      <RegularVideoThumnail>
+        {THIRD_VIDEO_SECTION.map((item, index) => (
           <RegularVideoItem video={item}></RegularVideoItem>
         ))}
       </RegularVideoThumnail>

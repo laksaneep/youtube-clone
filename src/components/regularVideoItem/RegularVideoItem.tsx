@@ -59,6 +59,11 @@ const RegularVideoItem = ({ video }: IRegularVideoItemProps) => {
             {getVideoTitle(video.url).slice(0, VIDEO_TITLE_LENGTH)}
             {getVideoTitle(video.url).length > VIDEO_TITLE_LENGTH && "..."}
           </Text>
+          <Text className="name">{video.user.name}</Text>
+          <Text className="details">
+            {video.duration}M views{" "}
+            <span className="dot">&#9679; 2 hours ago</span>
+          </Text>
         </RegularVideoTitle>
       </RegularVideoContents>
     </StyledRegularVideoItem>

@@ -17,7 +17,6 @@ function App() {
         <Header />
         <Body />
       </AppContainer>
-      ;
     </ThemeProvider>
   );
 }
